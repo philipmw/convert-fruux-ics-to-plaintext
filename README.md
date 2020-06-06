@@ -34,7 +34,10 @@ The AWK script's output is the order value, space, then the plaintext content, o
 Second, I sort the output.
 Since each line begins with the order value, we end up with "reminders" sorted by user-visible order.
 
-Finally, after everything is extracted and sorted, we remove the sort order values.
+Finally, after everything is extracted and sorted, we remove the sort order values and insert an additional linebreak between each line to separate paragraphs.
+
+The biggest challenge I experienced is with `sed`'s differences between platforms.
+I developed and tested this project only on macOS 10.15.
 
 ## Contributing
 
