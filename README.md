@@ -22,6 +22,8 @@ This project converts the exported .ics file into the plaintext I want:
 
     ./extract-summaries.awk downloaded-reminders-file.ics | sort | sed -E "s/^[[:digit:]]+ //" | awk '{ print $0 "\n" }'
 
+`extract-summaries.awk` returns a non-zero code if there is any error.
+
 ## How does it work?
 
 The key component is the venerable [AWK](https://en.wikipedia.org/wiki/AWK) and
